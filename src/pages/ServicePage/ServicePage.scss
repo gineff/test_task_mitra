@@ -1,0 +1,10 @@
+@import '@vars';
+
+.service-page {
+  background: $bg-color;
+  color: white;
+
+  h1 {
+    color: $yellow-color;
+  }
+}
