@@ -1,0 +1,19 @@
+@import '@vars';
+@import '@bootstrap';
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+}
+canvas {
+  display: block;
+}
+
+.navbar-nav .nav-link.active {
+  color: $primary;
+}
+.interactive {
+  cursor: pointer;
+}

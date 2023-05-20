@@ -10,6 +10,11 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
+      '@vars': path.resolve(__dirname, './src/vars'),
+      '@bootstrap': path.resolve(
+        __dirname,
+        'node_modules/bootstrap/scss/bootstrap'
+      ),
     },
   },
 })
