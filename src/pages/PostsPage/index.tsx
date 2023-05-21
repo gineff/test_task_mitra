@@ -1,5 +1,7 @@
+import { DefaultPageTmpl } from '@components/DefaultPageTmpl'
+
 const PostsPage = () => {
-  return <div>Posts</div>
+  return <DefaultPageTmpl>Posts</DefaultPageTmpl>
 }
 
 export { PostsPage }

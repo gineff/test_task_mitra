@@ -1,6 +1,6 @@
 enum ROUTES {
   ROOT = '/',
-  ABOUT = '/about/:id',
+  ABOUT = '/about',
   PROFILE = '/profile/:id',
   POSTS = '/posts',
 }

@@ -1,5 +1,7 @@
+import { DefaultPageTmpl } from '@components/DefaultPageTmpl'
+
 const AboutPage = () => {
-  return <div>About</div>
+  return <DefaultPageTmpl>About</DefaultPageTmpl>
 }
 
 export { AboutPage }
