@@ -1,8 +1,8 @@
 import axios, { AxiosResponse } from 'axios'
-import { User } from '@constants/users'
+import { User } from '@constants/posts'
 
 export const fetchUsers = async () => {
-  const response: AxiosResponse<User> = await axios.get(
+  const response: AxiosResponse<User[]> = await axios.get(
     `https://jsonplaceholder.typicode.com/users`
   )
   return response.data
