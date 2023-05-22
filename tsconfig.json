@@ -18,10 +18,11 @@
       "@pages/*": ["pages/*"],
       "@utils/*": ["utils/*"],
       "@hooks/*": ["hooks/*"],
+      "@hoc/*": ["hoc/*"],
       "@store/*": ["store/*"],
       "@constants/*": ["constants/*"],
       "@type/*": ["types/*"],
-      "@images/*": ["assets/images/*"],
+      "@images/*": ["assets/images/*"]
     },
     /* Linting */
     "strict": true,
@@ -30,5 +31,5 @@
     "noFallthroughCasesInSwitch": true
   },
   "include": ["src"],
-  "references": [{ "path": "./tsconfig.node.json" }],
+  "references": [{ "path": "./tsconfig.node.json" }]
 }
