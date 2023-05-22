@@ -1,0 +1,18 @@
+.about {
+  margin-top: 75px;
+
+  &__avatar-container {
+    position: relative;
+  }
+
+  &__content {
+    color: #fff;
+    margin-top: -75px;
+    padding-top: 25px;
+
+    p {
+      text-align: justify;
+      text-indent: 25px;
+    }
+  }
+}

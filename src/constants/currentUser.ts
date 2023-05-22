@@ -9,6 +9,7 @@ export type CurrentUser = {
   name: string
   email: string
   avatar?: string
+  about?: string
 }
 
 export type CurrentUserSlice = {
@@ -23,6 +24,7 @@ export const currentUserInitialState: CurrentUserSlice = {
   data: {
     name: '',
     email: '',
+    about: '',
     avatar: 'https://cdn-icons-png.flaticon.com/512/5953/5953714.png',
   },
 }

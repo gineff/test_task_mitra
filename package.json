@@ -23,6 +23,7 @@
     "redux-saga": "1.2.3"
   },
   "devDependencies": {
+    "@types/dompurify": "3.0.2",
     "@types/node": "18.16.3",
     "@types/react": "^18.0.28",
     "@types/react-beautiful-dnd": "13.1.4",
@@ -30,6 +31,7 @@
     "@typescript-eslint/eslint-plugin": "5.59.2",
     "@typescript-eslint/parser": "5.59.2",
     "@vitejs/plugin-react": "^4.0.0",
+    "dompurify": "3.0.3",
     "eslint": "^7.2.0",
     "eslint-config-airbnb": "19.0.4",
     "eslint-config-prettier": "8.8.0",
