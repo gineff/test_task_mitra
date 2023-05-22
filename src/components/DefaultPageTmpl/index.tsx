@@ -2,6 +2,7 @@ import { FC, HTMLAttributes } from 'react'
 import { Container } from 'react-bootstrap'
 import classNames from 'classnames'
 import { AppHeader } from '@components/AppHeader'
+import './DefaultPageTmpl.scss'
 
 export type DefaultPageTmplProps = HTMLAttributes<HTMLElement> & {
   showNav?: boolean
@@ -14,11 +15,11 @@ const DefaultPageTmpl: FC<DefaultPageTmplProps> = ({
 }) => {
   return (
     <div
-      className={classNames('w-100 h-100 d-flex app-def-tpl', cls)}
+      className={classNames('w-100 h-100 d-flex default-page-tmpl', cls)}
       {...attrs}>
-      <Container className="mx-auto app-def-tpl__wrapper">
+      <Container className="mx-auto default-page-tmpl__wrapper">
         <AppHeader showNav={showNav} className="mb-2 mx-auto" />
-        <main className="bg-light page-content">{content}</main>
+        <main className="mt-4 default-page-tmpl__content">{content}</main>
       </Container>
     </div>
   )

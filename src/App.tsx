@@ -9,26 +9,24 @@ import './App.scss'
 function App() {
   return (
     <>
-      <div>
-        <Routes>
-          <Route
-            path={ROUTES.ROOT}
-            element={<Navigate to={ROUTES.POSTS} replace />}
-          />
-          <Route path={ROUTES.ABOUT} element={<AboutPage />} />
-          <Route path={ROUTES.PROFILE} element={<ProfilePage />} />
-          <Route path={ROUTES.POSTS} element={<PostsPage />} />
-          <Route
-            path="*"
-            element={
-              <ServicePage
-                errorCode={404}
-                errorText={'Запрошенная страница не найдена'}
-              />
-            }
-          />
-        </Routes>
-      </div>
+      <Routes>
+        <Route
+          path={ROUTES.ROOT}
+          element={<Navigate to={ROUTES.POSTS} replace />}
+        />
+        <Route path={ROUTES.ABOUT} element={<AboutPage />} />
+        <Route path={ROUTES.PROFILE} element={<ProfilePage />} />
+        <Route path={ROUTES.POSTS} element={<PostsPage />} />
+        <Route
+          path="*"
+          element={
+            <ServicePage
+              errorCode={404}
+              errorText={'Запрошенная страница не найдена'}
+            />
+          }
+        />
+      </Routes>
     </>
   )
 }
