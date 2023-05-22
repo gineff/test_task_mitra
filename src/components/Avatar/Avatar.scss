@@ -1,16 +1,23 @@
 .avatar {
-  background-image: url(https://cdn-icons-png.flaticon.com/64/5953/5953714.png);
+  background-image: url("https://cdn-icons-png.flaticon.com/64/5953/5953714.png");
   background-color: #efefef;
   background-size: cover;
+
   &_size_ {
     &small {
+      padding: 2px;
       width: 40px;
       height: 40px;
-      padding: 2px;
     }
+
     &regular {
       width: 75px;
       height: 75px;
+    }
+
+    &large {
+      width: 150px;
+      height: 150px;
     }
   }
 }
