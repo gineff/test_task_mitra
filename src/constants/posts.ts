@@ -31,12 +31,28 @@ export type User = {
   avatar: string
 }
 
-export type UsersSlice = {
-  loadingStatus: LoadingStatus
-  data: User[]
+export type Post = {
+  id: number
+  userId: number
+  user?: User
+  title: string
+  body: string
 }
 
-export const usersInitialState: UsersSlice = {
+export type PostComment = {
+  id: number
+  postId: number
+  name: string
+  email: string
+  body: string
+}
+
+export type Posts = {
+  loadingStatus: LoadingStatus
+  data: Post[]
+}
+
+export const postsInitialState: Posts = {
   loadingStatus: LoadingStatus.Idle,
   data: [],
 }

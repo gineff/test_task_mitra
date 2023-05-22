@@ -1,8 +1,8 @@
 import createSagaMiddleware from 'redux-saga'
 import { configureStore } from '@reduxjs/toolkit'
-import userSlice from '@store/slices/users'
+import postsSlice from '@store/slices/posts'
 import currentUserSlice from '@store/slices/currentUser'
-import { usersInitialState } from '@constants/users'
+import { postsInitialState } from '@constants/posts'
 import { currentUserInitialState } from '@constants/currentUser'
 import { rootSaga } from '@store/saga'
 
@@ -11,11 +11,11 @@ const sagaMiddleware = createSagaMiddleware()
 export const store = configureStore({
   reducer: {
     currentUser: currentUserSlice,
-    users: userSlice,
+    posts: postsSlice,
   },
   preloadedState: {
     currentUser: currentUserInitialState,
-    users: usersInitialState,
+    posts: postsInitialState,
   },
   devTools: {
     name: 'The real McCoy',
