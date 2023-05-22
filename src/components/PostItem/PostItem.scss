@@ -1,0 +1,38 @@
+.post {
+  border: 1px solid rgba(0, 0, 0, 0.175);
+  border-radius: 15px;
+  box-shadow: 0 1px 2px 0 #0000001a;
+  overflow: hidden;
+  &__header {
+    min-height: 50px;
+    max-height: 75px;
+    text-align: left;
+    margin-bottom: -2px;
+  }
+  &__avatar {
+    width: auto;
+    max-height: 50px;
+  }
+  &__comment-btn {
+    font-size: small;
+    border-radius: 5px;
+    background-color: #a22b72 !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .post {
+    display: flex;
+    flex-direction: row;
+    &__header {
+      min-height: 150px;
+      max-height: none;
+      text-align: center;
+    }
+    &__avatar {
+      width: auto;
+      height: auto;
+      max-height: 100px;
+    }
+  }
+}
