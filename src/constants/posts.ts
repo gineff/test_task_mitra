@@ -39,20 +39,12 @@ export type Post = {
   body: string
 }
 
-export type PostComment = {
-  id: number
-  postId: number
-  name: string
-  email: string
-  body: string
-}
-
-export type Posts = {
+type PostsSlice = {
   loadingStatus: LoadingStatus
   data: Post[]
 }
 
-export const postsInitialState: Posts = {
+export const postsInitialState: PostsSlice = {
   loadingStatus: LoadingStatus.Idle,
   data: [],
 }
