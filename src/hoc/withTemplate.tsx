@@ -1,12 +1,14 @@
 /* eslint-disable react/display-name */
-import { ComponentType } from 'react'
+import { ComponentType, HTMLAttributes } from 'react'
 import { DefaultPageTmpl } from '@components/DefaultPageTmpl'
 
+type withTemplateProps = HTMLAttributes<HTMLElement> & { showNav?: false }
+
 const withTemplate =
-  (Wrapped: ComponentType): React.FC =>
+  (Wrapped: ComponentType, props?: withTemplateProps): React.FC =>
   () => {
     return (
-      <DefaultPageTmpl>
+      <DefaultPageTmpl {...props}>
         <Wrapped />
       </DefaultPageTmpl>
     )
