@@ -2,19 +2,20 @@ import { Post as PostType } from '@constants/posts'
 import { FC, HTMLAttributes } from 'react'
 import { Card, Button } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
+import { dummyAvatar } from '@constants/index'
 import './PostItem.scss'
 
 type PostProps = Omit<HTMLAttributes<HTMLElement>, 'id'> &
   PostType & { showAvatar: boolean }
 
-const PostItem: FC<PostProps> = ({ title, body, userId, showAvatar }) => {
+const PostItem: FC<PostProps> = ({ title, body, userId, showAvatar, user }) => {
   return (
     <Card className="post my-3">
       {showAvatar ? (
         <Card.Header className="post__header">
           <Link to={`/profile/${userId}`}>
             <Card.Img
-              src="https://cdn-icons-png.flaticon.com/128/4140/4140048.png"
+              src={(user && user.avatar) || dummyAvatar}
               className="post__avatar"
             />
           </Link>

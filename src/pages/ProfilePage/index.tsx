@@ -5,7 +5,6 @@ import { LoadingStatus } from '@constants/index'
 import { useAppDispatch, useAppSelector } from '@hooks/redux_typed_hooks'
 import { selectPosts } from '@store/selectors'
 import { fetchPosts } from '@store/slices/posts'
-import { withTemplate } from '@hoc/withTemplate'
 import { useEffect, useMemo } from 'react'
 import { Spinner } from 'react-bootstrap'
 import { PostsList } from '@components/PostsList'
@@ -13,6 +12,7 @@ import './ProfilePage.scss'
 import { Post as PostType } from '@constants/posts'
 import { Avatar } from '@components/Avatar'
 import { AppHeaderUserInfo } from '@components/AppHeaderUserInfo'
+import { dummyAvatar } from '@constants/index'
 
 const ProfilePage = () => {
   const navigate = useNavigate()
@@ -63,7 +63,12 @@ const ProfilePage = () => {
           <span>Ошибка загрузки</span>
         ) : (
           <>
-            <Avatar size="large" variant="half-up" className="outline" />
+            <Avatar
+              size="large"
+              variant="half-up"
+              className="outline"
+              image={dummyAvatar}
+            />
             <AppHeaderUserInfo
               name={name}
               email={email}
