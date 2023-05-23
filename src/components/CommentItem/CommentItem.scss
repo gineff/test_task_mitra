@@ -1,0 +1,14 @@
+.comment-item {
+  border: none;
+  background-color: rgba(23, 138, 235, 0.10);
+
+  .card-title {
+    text-align: left;
+    font-size: small;
+  }
+  .card-text {
+    text-align: justify;
+    text-indent: 20px;
+    font-size: smaller;
+  }
+}
