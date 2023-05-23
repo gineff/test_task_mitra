@@ -1,7 +1,11 @@
 .avatar {
-  background-image: url("https://cdn-icons-png.flaticon.com/64/5953/5953714.png");
+  background-image: url('https://cdn-icons-png.flaticon.com/64/5953/5953714.png');
   background-color: #efefef;
   background-size: cover;
+
+  &.outline {
+    outline: 10px solid #f8f9fa87;
+  }
 
   &_size_ {
     &small {
@@ -19,5 +23,11 @@
       width: 150px;
       height: 150px;
     }
+  }
+
+  &__container.avatar_variant_half-up {
+    margin-bottom: -75px;
+    position: relative;
+    top: -75px;
   }
 }
