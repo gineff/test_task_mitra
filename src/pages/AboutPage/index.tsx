@@ -13,18 +13,18 @@ const AboutPage = () => {
     data: { about, avatar },
   } = useAppSelector(selectCurretnUser)
 
-  const avatarStyle: React.CSSProperties = {
-    outline: '10px solid #f8f9fa87',
-    position: 'relative',
-    top: '-75px',
-  }
   const sinizedHTML = DOMPurify.sanitize(about as string)
   return (
     <DefaultPageTmpl className="about-page">
       {loadingStatus === LoadingStatus.Succeeded ? (
         <div className="about p-4 pt-0">
           <div className="about__avatar-container">
-            <Avatar size="large" style={avatarStyle} image={avatar as string} />
+            <Avatar
+              size="large"
+              variant="half-up"
+              className="outline"
+              image={avatar as string}
+            />
           </div>
           <div
             className="about__content"
