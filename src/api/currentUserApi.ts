@@ -27,7 +27,7 @@ export const fetchCurrentUser = async () => {
   const currentUser = {
     name: 'Andrey',
     email: 'canone@inbox.ru',
-    avatar: 'images/avatar.jpg',
+    avatar: '/images/avatar.jpg',
     about,
   }
   return currentUser as CurrentUser
